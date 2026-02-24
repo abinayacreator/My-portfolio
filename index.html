@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abinaya · seven colour rainbow</title>
+    <!-- pure CSS, rainbow blend, split contact, hand wave, core abilities formatted, linkedin updated, image added -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", Roboto, sans-serif;
+      }
+
+      body {
+        /* seven colour rainbow mix – smooth & vibrant */
+        background: linear-gradient(
+          125deg,
+          #ffd3d0,
+          #ffead0,
+          #fff2cf,
+          #d6f0d0,
+          #bde4f0,
+          #e0ccf5,
+          #fbc4e0
+        );
+        background-size: 400% 400%;
+        animation: prismFlow 24s ease infinite;
+        color: #12102b;
+        line-height: 1.5;
+        scroll-behavior: smooth;
+        min-height: 100vh;
+      }
+
+      @keyframes prismFlow {
+        0% {
+          background-position: 0% 0%;
+        }
+        25% {
+          background-position: 50% 50%;
+        }
+        50% {
+          background-position: 100% 100%;
+        }
+        75% {
+          background-position: 50% 50%;
+        }
+        100% {
+          background-position: 0% 0%;
+        }
+      }
+
+      /* ===== glassmorphic navigation ===== */
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.2rem 8%;
+        background: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+        box-shadow: 0 12px 35px -5px rgba(150, 80, 255, 0.2);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        border-radius: 0 0 40px 40px;
+      }
+
+      .logo {
+        font-size: 2.3rem;
+        font-weight: 700;
+        background: linear-gradient(
+          145deg,
+          #cc3f66,
+          #f47a5c,
+          #f7b25c,
+          #6bba6b,
+          #4f9fd4,
+          #9b72cf,
+          #e668b3
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        text-shadow: 0 2px 12px rgba(255, 255, 255, 0.7);
+      }
+
+      nav ul {
+        display: flex;
+        gap: 2.5rem;
+        list-style: none;
+        flex-wrap: wrap;
+      }
+
+      nav a {
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.2rem;
+        color: #1d113b;
+        padding: 0.4rem 0;
+        border-bottom: 2px solid transparent;
+        transition: 0.2s;
+      }
+
+      nav a:hover {
+        border-bottom-color: #e6589e;
+        color: #200f46;
+        text-shadow: 0 0 15px #ffe28a;
+      }
+
+      /* ===== sections ===== */
+      section {
+        padding: 5rem 8%;
+        max-width: 1300px;
+        margin: 0 auto;
+      }
+
+      /* home layout with image and text side by side */
+      .hero {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4rem;
+        flex-wrap: wrap;
+        text-align: left; /* left align inside flex children */
+        padding-top: 2rem;
+        padding-bottom: 3rem;
+      }
+
+      .hero-content {
+        flex: 1 1 350px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* keep text left within the column */
+      }
+
+      .hero-image {
+        flex: 0 0 260px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .profile-pic {
+        width: 260px;
+        height: 260px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 6px solid rgba(255, 255, 255, 0.7);
+        box-shadow: 0 20px 35px rgba(150, 60, 200, 0.3);
+        background: rgba(255, 255, 255, 0.4); /* fallback if image missing */
+        backdrop-filter: blur(3px);
+        transition: transform 0.3s ease;
+      }
+
+      .profile-pic:hover {
+        transform: scale(1.02) rotate(1deg);
+      }
+
+      h1 {
+        font-size: 4.2rem;
+        font-weight: 700;
+        background: linear-gradient(
+          145deg,
+          #cb3c6d,
+          #e8684a,
+          #f0b345,
+          #3faa6b,
+          #3f91cf,
+          #9b5fc0,
+          #e2589f
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        line-height: 1.2;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      .hand-wave {
+        font-size: 4.5rem;
+        display: inline-block;
+        animation: wave 2s infinite;
+        transform-origin: 70% 70%;
+      }
+
+      @keyframes wave {
+        0% {
+          transform: rotate(0deg);
+        }
+        10% {
+          transform: rotate(14deg);
+        }
+        20% {
+          transform: rotate(-8deg);
+        }
+        30% {
+          transform: rotate(14deg);
+        }
+        40% {
+          transform: rotate(-4deg);
+        }
+        50% {
+          transform: rotate(10deg);
+        }
+        60% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(0deg);
+        }
+      }
+
+      .hero p {
+        font-size: 1.4rem;
+        max-width: 600px;
+        background: rgba(255, 255, 255, 0.35);
+        backdrop-filter: blur(12px);
+        padding: 1.2rem 2.5rem;
+        border-radius: 80px;
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        box-shadow: 0 15px 30px -8px rgba(0, 0, 0, 0.1);
+        color: #12102b;
+        margin: 2rem 0; /* left aligned with container */
+      }
+
+      .hero p strong {
+        font-weight: 700;
+        color: #1f0b39;
+        text-shadow: 0 0 5px #ffb8d9;
+      }
+
+      .btn {
+        display: inline-block;
+        background: linear-gradient(
+          145deg,
+          #ff6a9c,
+          #ff8e72,
+          #ffd166,
+          #6fcf97,
+          #7bb3ff,
+          #c480f0,
+          #fd8dc0
+        );
+        background-size: 200% 200%;
+        border: 2px solid white;
+        color: #0e0b27;
+        font-weight: 800;
+        padding: 1.1rem 4rem;
+        border-radius: 70px;
+        font-size: 1.5rem;
+        text-decoration: none;
+        box-shadow: 0 0 25px #ffb6e0, 0 15px 35px #d98eff;
+        transition: 0.2s;
+        animation: pulseGlow 2s infinite ease-in-out;
+        margin-top: 1rem;
+      }
+
+      @keyframes pulseGlow {
+        0% {
+          box-shadow: 0 0 20px #ff9acb, 0 15px 35px #c481ff;
+        }
+        50% {
+          box-shadow: 0 0 45px #ffe183, 0 20px 45px #ff9ee0;
+          transform: scale(1.02);
+        }
+        100% {
+          box-shadow: 0 0 20px #ff9acb, 0 15px 35px #c481ff;
+        }
+      }
+
+      .btn:hover {
+        background: linear-gradient(
+          145deg,
+          #ff86b0,
+          #ffa587,
+          #ffdc7c,
+          #87daa1,
+          #94c2ff,
+          #d29eff,
+          #fda7d0
+        );
+        transform: scale(1.03);
+        box-shadow: 0 0 40px #ffe293, 0 20px 45px #c67df2;
+      }
+
+      h2 {
+        font-size: 3rem;
+        font-weight: 650;
+        margin-bottom: 2.5rem;
+        background: linear-gradient(
+          145deg,
+          #b23b64,
+          #db6042,
+          #e2a33b,
+          #359e5d,
+          #3b80b9,
+          #824bb3,
+          #cf4790
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        display: inline-block;
+        border-bottom: 4px dotted rgba(255, 255, 255, 0.8);
+        padding-bottom: 0.5rem;
+      }
+
+      /* core abilities (split format) */
+      .core-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2.5rem;
+        margin: 2rem 0 1rem;
+      }
+
+      .skill-block {
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(16px);
+        border-radius: 55px;
+        padding: 2.5rem 2.2rem;
+        border: 1.5px solid rgba(255, 255, 255, 0.6);
+        box-shadow: 0 20px 35px -12px rgba(80, 45, 150, 0.2);
+      }
+
+      .skill-block h3 {
+        font-size: 2.3rem;
+        font-weight: 650;
+        margin-bottom: 1.8rem;
+        background: linear-gradient(
+          145deg,
+          #9f4060,
+          #d56b46,
+          #dea53e,
+          #479e5b,
+          #4c84c0,
+          #8655ba,
+          #cc569b
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        border-left: 10px solid rgba(255, 255, 255, 0.8);
+        padding-left: 1.2rem;
+      }
+
+      .skill-list {
+        list-style: none;
+      }
+
+      .skill-list li {
+        font-size: 1.3rem;
+        margin: 0.8rem 0;
+        padding: 0.3rem 0;
+        border-bottom: 1px dashed rgba(255, 255, 255, 0.5);
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        font-weight: 500;
+        color: #1a1136;
+      }
+
+      .skill-list li::before {
+        content: "✦";
+        color: #ff86b3;
+        font-size: 1.8rem;
+      }
+
+      /* projects */
+      .card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2.5rem;
+        margin-top: 2rem;
+      }
+
+      .card {
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(14px);
+        border-radius: 50px;
+        padding: 2.5rem 2rem;
+        border: 1.5px solid rgba(255, 255, 255, 0.6);
+        transition: 0.3s;
+        text-align: center;
+      }
+
+      .card:hover {
+        transform: translateY(-10px);
+        background: rgba(255, 255, 255, 0.3);
+        border-color: #fff;
+      }
+
+      .card i {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      .card h3 {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 0.8rem;
+        background: linear-gradient(
+          145deg,
+          #c54570,
+          #ea7547,
+          #e7ae44,
+          #48a55d,
+          #478dce,
+          #9f65c9,
+          #d461aa
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      /* achievements */
+      .badge-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        justify-content: center;
+        margin: 2rem 0;
+      }
+
+      .badge {
+        background: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(8px);
+        padding: 0.8rem 2.2rem;
+        border-radius: 60px;
+        border: 1px solid white;
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: #1b103d;
+      }
+
+      /* contact split */
+      .contact-split {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(18px);
+        border-radius: 70px;
+        padding: 2.5rem;
+        border: 1.5px solid rgba(255, 255, 255, 0.6);
+      }
+
+      .contact-info {
+        flex: 1 1 280px;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      .contact-info .detail {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        background: rgba(255, 255, 255, 0.25);
+        padding: 1rem 2rem;
+        border-radius: 60px;
+        border: 1px solid white;
+      }
+
+      .contact-info i {
+        font-size: 2.2rem;
+        background: linear-gradient(
+          145deg,
+          #ec6184,
+          #f68d5a,
+          #f0ba5a,
+          #65b36b,
+          #5699d8,
+          #b07ace,
+          #e473b0
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .social-split {
+        display: flex;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        margin-top: 1rem;
+      }
+
+      .social-split a {
+        background: rgba(255, 255, 255, 0.25);
+        border: 1.5px solid white;
+        padding: 0.8rem 2rem;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 600;
+        color: #1e1240;
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        transition: 0.2s;
+      }
+
+      .social-split a:hover {
+        background: rgba(255, 255, 255, 0.6);
+        transform: scale(1.02);
+      }
+
+      .contact-form {
+        flex: 1 1 320px;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 2rem 2rem;
+        border-radius: 60px;
+        border: 1px solid white;
+      }
+
+      .form-group {
+        margin-bottom: 1.8rem;
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        padding: 1rem 1.8rem;
+        background: rgba(255, 255, 255, 0.4);
+        border: 1.5px solid white;
+        border-radius: 60px;
+        font-size: 1.1rem;
+        color: #14103a;
+        font-weight: 500;
+      }
+
+      .contact-form textarea {
+        border-radius: 40px;
+        resize: vertical;
+      }
+
+      .contact-form input:focus,
+      .contact-form textarea:focus {
+        outline: none;
+        border-color: #ff90c2;
+        background: rgba(255, 255, 255, 0.7);
+      }
+
+      .contact-form button {
+        width: 100%;
+        padding: 1rem;
+        background: rgba(255, 255, 255, 0.4);
+        border: 2px solid white;
+        border-radius: 60px;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #1c1240;
+        cursor: pointer;
+        transition: 0.2s;
+      }
+
+      .contact-form button:hover {
+        background: white;
+        border-color: #fa8cb0;
+      }
+
+      footer {
+        text-align: center;
+        padding: 2rem;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(8px);
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        color: #1d1540;
+      }
+
+      /* responsive */
+      @media (max-width: 900px) {
+        .hero {
+          flex-direction: column;
+          text-align: center;
+        }
+        .hero-content {
+          align-items: center;
+        }
+        h1 {
+          justify-content: center;
+        }
+        .hero p {
+          margin: 2rem auto;
+        }
+        .btn {
+          align-self: center;
+        }
+      }
+
+      @media (max-width: 800px) {
+        nav {
+          flex-direction: column;
+          gap: 0.8rem;
+        }
+        h1 {
+          font-size: 3.2rem;
+        }
+        .hand-wave {
+          font-size: 3.5rem;
+        }
+        .hero p {
+          font-size: 1.2rem;
+        }
+      }
+      @media (max-width: 500px) {
+        section {
+          padding: 3rem 5%;
+        }
+        .contact-split {
+          padding: 1.5rem;
+        }
+        .btn {
+          font-size: 1.3rem;
+          padding: 0.9rem 2.5rem;
+        }
+        .profile-pic {
+          width: 210px;
+          height: 210px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">Abinaya ✦</div>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#core">Core</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- home section: now includes a profile image on the right -->
+    <section id="home" class="hero">
+      <!-- text content first -->
+      <div class="hero-content">
+        <h1>
+          <span>Hi, I'm Abinaya</span>
+          <span class="hand-wave">👋</span>
+        </h1>
+        <p>
+          <strong>Passionate Front‑End Developer</strong> · Computer Science
+          Undergraduate · creative thinker
+        </p>
+        <a href="#core" class="btn">explore my world</a>
+      </div>
+      <!-- image container with direct image URL -->
+      <div class="hero-image">
+        <img
+          src="pic.jpeg"
+          alt="Abinaya - Frontend Developer"
+          class="profile-pic"
+          title="Abinaya D"
+        />
+      </div>
+    </section>
+
+    <!-- core abilities split -->
+    <section id="core">
+      <h2>✦ core abilities ✦</h2>
+      <div class="core-grid">
+        <div class="skill-block">
+          <h3>Programming</h3>
+          <ul class="skill-list">
+            <li>C / C++</li>
+            <li>JAVA</li>
+            <li>MySQL</li>
+            <li>Data Structures & Algorithms</li>
+          </ul>
+        </div>
+        <div class="skill-block">
+          <h3>Web & others</h3>
+          <ul class="skill-list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>OOP · Teamwork</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- projects -->
+    <section id="projects">
+      <h2>✨ dev projects ✨</h2>
+      <div class="card-grid">
+        <div class="card">
+          <i>🚌</i>
+          <h3>bus reservation</h3>
+          <p>
+            Java Swing + JDBC + MySQL — ticket booking, seat allocation, user
+            authentication.
+          </p>
+        </div>
+        <div class="card">
+          <i>🏨</i>
+          <h3>hotel management</h3>
+          <p>
+            Java + JDBC + MySQL — room allocation, booking, automated billing.
+          </p>
+        </div>
+        <div class="card">
+          <i>💡</i>
+          <h3>smart india hackathon</h3>
+          <p>participant 2025 · full‑stack prototype · team collaboration</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- achievements -->
+    <section id="achievements">
+      <h2>🏆 achievements & engagements</h2>
+      <div class="badge-container">
+        <span class="badge">🧠 state level BrainOBrain · runner‑up</span>
+        <span class="badge">🔬 district level science olympiad · winner</span>
+        <span class="badge">🩸 youth red cross · active member</span>
+      </div>
+      <div class="card-grid" style="margin-top: 1.5rem">
+        <div class="card">
+          <i>🧠</i>
+          <h3>BrainOBrain</h3>
+          <p>state runner‑up · logical reasoning</p>
+        </div>
+        <div class="card">
+          <i>🔬</i>
+          <h3>science olympiad</h3>
+          <p>district winner · scientific excellence</p>
+        </div>
+        <div class="card">
+          <i>🩸</i>
+          <h3>youth red cross</h3>
+          <p>community service · health awareness</p>
+        </div>
+      </div>
+      <div
+        style="
+          margin-top: 2rem;
+          text-align: center;
+          background: rgba(255, 255, 255, 0.2);
+          padding: 1.2rem;
+          border-radius: 60px;
+        "
+      >
+        <p>
+          <strong>certifications:</strong> Internal Hackathon SI 2025 · HTML-5
+          from Infosys Springboard
+        </p>
+      </div>
+    </section>
+
+    <!-- contact split with updated LinkedIn -->
+    <section id="contact">
+      <h2>📬 contact</h2>
+      <div class="contact-split">
+        <div class="contact-info">
+          <div class="detail"><i>📞</i> <span>+91-9043100645</span></div>
+          <div class="detail"><i>✉️</i> <span>arthiabi271@gmail.com</span></div>
+          <div class="detail"><i>📍</i> <span>Kallakurichi, India</span></div>
+          <div class="social-split">
+            <a href="https://github.com/Abinaya" target="_blank"
+              ><i>🐙</i> GitHub</a
+            >
+            <a
+              href="https://www.linkedin.com/in/abinaya-d-809764351"
+              target="_blank"
+              ><i>🔗</i> LinkedIn</a
+            >
+          </div>
+          <p style="font-size: 1.1rem; opacity: 0.9; margin-top: 1rem">
+            💬 open to collabs & opportunities
+          </p>
+        </div>
+        <div class="contact-form">
+          <form>
+            <div class="form-group">
+              <input type="text" placeholder="enter your name" required />
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="enter your email" required />
+            </div>
+            <div class="form-group">
+              <textarea rows="3" placeholder="your message" required></textarea>
+            </div>
+            <button type="submit">send message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © 2026 Abinaya · computer science undergraduate · seven colour blend
+    </footer>
+  </body>
+</html>
